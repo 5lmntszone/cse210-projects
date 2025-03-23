@@ -21,6 +21,7 @@ class Program
         Console.WriteLine($"Top: {f.GetTop()}");
         Console.WriteLine($"Bottom: {f.GetBottom()}");
 
-        
+        Console.WriteLine($"f: {f.GetFractionString()} = {f.GetDecimalValue()}");
+
     }
 }

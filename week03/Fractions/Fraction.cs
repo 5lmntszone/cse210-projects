@@ -40,6 +40,16 @@ public class Fraction
     {
         _bottom = value;
     }
+
+    public string GetFractionString()
+    {
+        return $"{_top}/{_bottom}";
+    }
+
+    public double GetDecimalValue()
+    {
+        return (double)_top / _bottom;
+    }
     public override string ToString()
     {
         return $"{_top}/{_bottom}";
