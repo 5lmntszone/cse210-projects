@@ -21,9 +21,9 @@ public class Activity
     public void DisplayEndingMessage()
     {
         Console.WriteLine("You did a great job!");
-        Thread.Sleep(2000);
+        ShowSpinner(2);
         Console.WriteLine($"You have completed '{_name}'. Duration: {_duration} seconds.");
-        Thread.Sleep(3000);
+        ShowSpinner(3);
     }
 
     public void ShowSpinner(int seconds)
