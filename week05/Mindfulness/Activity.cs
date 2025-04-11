@@ -12,7 +12,7 @@ public class Activity
 
     public void DisplayStartingMessage()
     {
-        Console.Write($"{_name}: {_description}.\nHow long would you like to do this activity? ");
+        Console.Write($"{_name}: {_description}\nHow long would you like to do this activity? (in seconds) ");
         _duration = int.Parse(Console.ReadLine());
         Console.WriteLine("Prepare to begin...");
         ShowCountDown(5);

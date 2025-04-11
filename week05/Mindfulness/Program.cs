@@ -4,6 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
+        // I've added a log of how many times activities were performed.
+        Dictionary<string, int> activityLog = new Dictionary<string, int>
+        {
+            { "Breathing Activity", 0 },
+            { "Reflecting Activity", 0 },
+            { "Listing Activity", 0 }
+        };
+
         bool running = true;
 
         while (running)
@@ -23,21 +31,30 @@ class Program
                 case "1":
                     BreathingActivity breathing = new BreathingActivity();
                     breathing.Run();
+                    activityLog["Breathing Activity"]++;
                     break;
                 
                 case "2":
                     ReflectingActivity reflecting = new ReflectingActivity();
                     reflecting.Run();
+                    activityLog["Reflecting Activity"]++;
                     break;
                 
                 case "3":
                     ListingActivity listing = new ListingActivity();
                     listing.Run();
+                    activityLog["Listing Activity"]++;
                     break;
                 
                 case "4":
                     running = false;
                     Console.WriteLine("Thank you for using the Mindfulness Program. Goodbye!");
+                    Console.WriteLine("\nHere’s how many times you did each activity:");
+    
+                    foreach (var entry in activityLog)
+                    {
+                        Console.WriteLine($"- {entry.Key}: {entry.Value} time(s)");
+                    }
                     break;
                 
                 default:
