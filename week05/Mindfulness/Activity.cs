@@ -4,24 +4,25 @@ public class Activity
     protected string _description;
     protected int _duration;
 
-    public Activity()
+    public Activity(string name, string description)
     {
-
+        _name = name;
+        _description = description;
     }
 
     public void DisplayStartingMessage()
     {
-        Console.Write($"{_name}: {_description}.\nHow long would you like to do this activity?");
+        Console.Write($"{_name}: {_description}.\nHow long would you like to do this activity? ");
         _duration = int.Parse(Console.ReadLine());
         Console.WriteLine("Prepare to begin...");
-        Thread.Sleep(3000);
+        ShowCountDown(5);
     }
 
     public void DisplayEndingMessage()
     {
         Console.WriteLine("You did a great job!");
         Thread.Sleep(2000);
-        Console.WriteLine($"You have completed {_name} - {_duration}");
+        Console.WriteLine($"You have completed '{_name}'. Duration: {_duration} seconds.");
         Thread.Sleep(3000);
     }
 
@@ -47,7 +48,7 @@ public class Activity
         {
             string s = animationStrings[i];
             Console.Write(s);
-            Thread.Sleep(1000);
+            Thread.Sleep(200);
             Console.Write("\b \b");
 
             i++;
