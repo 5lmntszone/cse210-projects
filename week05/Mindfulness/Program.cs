@@ -9,7 +9,7 @@ class Program
         while (running)
         {
             Console.Clear();
-            Console.WriteLine("welcome to the Mindfulness Program!");
+            Console.WriteLine("Welcome to the Mindfulness Program!");
             Console.WriteLine("Please select an activity:");
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Reflecting Activity");
