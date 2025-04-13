@@ -49,16 +49,22 @@ public class ListingActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
 
-        while (DateTime.Now < endTime)
+        while (true)
+    {
+        if (DateTime.Now >= endTime)
         {
-            Console.Write("> ");
-            string input = Console.ReadLine();
-
-            if (!string.IsNullOrWhiteSpace(input))
-            {
-                items.Add(input);
-            }
+            Console.WriteLine("\n⏰ Time’s up!");
+            break;
         }
+
+        Console.Write("> ");
+        string input = Console.ReadLine();
+
+        if (!string.IsNullOrWhiteSpace(input))
+        {
+            items.Add(input);
+        }
+    }
 
         return items;
     }
