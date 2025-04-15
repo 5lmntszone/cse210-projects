@@ -1,0 +1,4 @@
+70
+SimpleGoal|Take out the trash|take out the trash in the evening|20|True
+EternalGoal|Scriptures|Read scriptures everyday|20
+ChecklistGoal|wake up|Wake up at 7am|30|7|300|1

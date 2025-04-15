@@ -60,7 +60,7 @@ public class GoalManager
     {
         for (int i = 0; i < _goals.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {_goals[i]._shortName}");
+            Console.WriteLine($"{i + 1}. {_goals[i].ShortName}");
         }
     }
 
@@ -118,7 +118,7 @@ public class GoalManager
         Console.WriteLine("Select a goal to record:");
         for (int i = 0; i < _goals.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {_goals[i]._shortName}");
+            Console.WriteLine($"{i + 1}. {_goals[i].ShortName}");
         }
 
         Console.Write("Enter goal number: ");
